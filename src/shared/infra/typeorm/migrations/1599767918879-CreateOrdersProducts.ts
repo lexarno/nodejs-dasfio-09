@@ -26,12 +26,12 @@ export class CreateOrdersProducts1599767918879 implements MigrationInterface {
           {
             name: 'price',
             type: 'decimal',
-            precision: 10,
+            precision: 8,
             scale: 2,
           },
           {
             name: 'quantity',
-            type: 'varchar',
+            type: 'int',
           },
           {
             name: 'created_at',
@@ -54,6 +54,7 @@ export class CreateOrdersProducts1599767918879 implements MigrationInterface {
         columnNames: ['order_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'orders',
+        onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
       }),
     );
@@ -65,6 +66,7 @@ export class CreateOrdersProducts1599767918879 implements MigrationInterface {
         columnNames: ['product_id'],
         referencedColumnNames: ['id'],
         referencedTableName: 'products',
+        onUpdate: 'CASCADE',
         onDelete: 'SET NULL',
       }),
     );

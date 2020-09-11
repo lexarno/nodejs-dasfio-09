@@ -16,16 +16,17 @@ export class CreateProducts1599767857105 implements MigrationInterface {
           {
             name: 'name',
             type: 'varchar',
+            isUnique: true,
           },
           {
             name: 'price',
             type: 'decimal',
-            precision: 10,
+            precision: 8,
             scale: 2,
           },
           {
             name: 'quantity',
-            type: 'varchar',
+            type: 'int',
           },
           {
             name: 'created_at',
